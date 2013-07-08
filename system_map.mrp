@@ -9,22 +9,22 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Jun 16 20:42:23 2013
+Mapped Date    : Thu Jul 04 16:33:36 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   20
+Number of warnings:   30
 Slice Logic Utilization:
   Number of Slice Registers:                 1,773 out of 301,440    1%
     Number used as Flip Flops:               1,773
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,910 out of 150,720    1%
-    Number used as logic:                    2,865 out of 150,720    1%
+  Number of Slice LUTs:                      2,927 out of 150,720    1%
+    Number used as logic:                    2,866 out of 150,720    1%
       Number using O6 output only:           2,326
-      Number using O5 output only:             171
+      Number using O5 output only:             172
       Number using O5 and O6:                  368
       Number used as ROM:                        0
     Number used as Memory:                      15 out of  58,400    1%
@@ -34,17 +34,17 @@ Slice Logic Utilization:
         Number using O6 output only:            11
         Number using O5 output only:             0
         Number using O5 and O6:                  4
-    Number used exclusively as route-thrus:     30
-      Number with same-slice register load:     19
+    Number used exclusively as route-thrus:     46
+      Number with same-slice register load:     35
       Number with same-slice carry load:        11
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,151 out of  37,680    3%
-  Number of LUT Flip Flop pairs used:        3,196
-    Number with an unused Flip Flop:         1,494 out of   3,196   46%
-    Number with an unused LUT:                 286 out of   3,196    8%
-    Number of fully used LUT-FF pairs:       1,416 out of   3,196   44%
+  Number of occupied Slices:                   968 out of  37,680    2%
+  Number of LUT Flip Flop pairs used:        3,117
+    Number with an unused Flip Flop:         1,438 out of   3,117   46%
+    Number with an unused LUT:                 190 out of   3,117    6%
+    Number of fully used LUT-FF pairs:       1,489 out of   3,117   47%
     Number of unique control sets:              67
     Number of slice register sites lost
       to control set restrictions:             216 out of 301,440    1%
@@ -58,8 +58,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        68 out of     600   11%
-    Number of LOCed IOBs:                       45 out of      68   66%
+  Number of bonded IOBs:                        78 out of     600   13%
+    Number of LOCed IOBs:                       70 out of      78   89%
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
@@ -97,11 +97,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                5.19
+Average Fanout of Non-Clock Nets:                5.18
 
-Peak Memory Usage:  815 MB
-Total REAL time to MAP completion:  1 mins 17 secs 
-Total CPU time to MAP completion:   1 mins 17 secs 
+Peak Memory Usage:  817 MB
+Total REAL time to MAP completion:  1 mins 10 secs 
+Total CPU time to MAP completion:   1 mins 10 secs 
 
 Table of Contents
 -----------------
@@ -221,17 +221,37 @@ WARNING:Place:837 - Partially locked IO Bus is found.
    	 Comp: sysACE_MPDATA<9>
    	 Comp: sysACE_MPDATA<8>
 
+WARNING:PhysDesignRules:368 - The signal <SO_Up_In_OBUF> is incomplete. The signal is not driven by any source pin in
+   the design.
+WARNING:PhysDesignRules:367 - The signal <CAout_IBUF> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal <CBout_IBUF> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:368 - The signal <Ph_En_OBUF> is incomplete. The signal is not driven by any source pin in the
+   design.
+WARNING:PhysDesignRules:368 - The signal <OutEn_OBUF> is incomplete. The signal is not driven by any source pin in the
+   design.
+WARNING:PhysDesignRules:367 - The signal <SO_not_Up_IBUF> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:368 - The signal <SO_not_Up_In_OBUF> is incomplete. The signal is not driven by any source pin
+   in the design.
+WARNING:PhysDesignRules:368 - The signal <SO_Down_In_OBUF> is incomplete. The signal is not driven by any source pin in
+   the design.
+WARNING:PhysDesignRules:367 - The signal <SO_not_Down_IBUF> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:368 - The signal <SO_not_Down_In_OBUF> is incomplete. The signal is not driven by any source pin
+   in the design.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network SO_not_Up has no load.
-INFO:LIT:395 - The above info message is repeated 24 more times for the
+INFO:LIT:243 - Logical network SO_not_Up_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 18 more times for the
    following (max. 5 shown):
-   SO_not_Down,
-   CAout,
-   CBout,
-   OutEn,
-   Ph_En
+   SO_not_Down_IBUF,
+   CAout_IBUF,
+   CBout_IBUF,
+   E2M/EC/register32File/doutb<31>,
+   E2M/EC/register32File/doutb<30>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
@@ -249,8 +269,8 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more inform
    Command Line Tools User Guide for information on generating a TSI report.
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 68 IOs, 45 are locked
-   and 23 are not locked. If you would like to print the names of these IOs,
+INFO:Place:834 - Only a subset of IOs are locked. Out of 78 IOs, 70 are locked
+   and 8 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
@@ -310,8 +330,10 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CA_SI                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| CB_SI                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| CA_SI                              | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| CAout                              | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| CB_SI                              | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| CBout                              | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
 | CLK_200N                           | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | CLK_200P                           | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | GMII_GTX_CLK_0                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
@@ -345,12 +367,20 @@ Section 6 - IOB Properties
 | LED<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PH1                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PH2                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| OutEn                              | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| PH1                                | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| PH2                                | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| Ph_En                              | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
 | RESET                              | IOB              | INPUT     | SSTL15               |       |          |      |              |          |          |
 | SO_Down                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| SO_Down_In                         | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
 | SO_Up                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| Trig                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| SO_Up_In                           | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| SO_not_Down                        | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_not_Down_In                     | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| SO_not_Up                          | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_not_Up_In                       | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
+| Trig                               | IOB              | OUTPUT    | LVCMOS12             |       | 6        | SLOW |              |          |          |
 | sysACE_CLK                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | sysACE_MPADD<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | sysACE_MPADD<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |

@@ -1,5 +1,6 @@
 -w
 -g DebugBitstream:No
+-d
 -g Binary:no
 -g CRC:Enable
 -g ConfigRate:2

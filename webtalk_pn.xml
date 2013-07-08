@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sun Jun 16 20:43:42 2013">
+<application name="pn" timeStamp="Thu Jul 04 16:34:48 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="DE09C64E047D471C960F1C1A450251CF" type="project"/>
-<property name="ProjectIteration" value="4" type="project"/>
+<property name="ProjectIteration" value="13" type="project"/>
 <property name="ProjectFile" value="C:/Users/praveen/Xilinx work/Dropbox/Rice Internship work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW/ML605/SIRC_HW (Real PUF)/SIRC_HW_ML605.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-06-16T19:52:24" type="project"/>
 </section>
@@ -24,9 +24,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-06-16T19:52:24" type="design"/>
 <property name="PROP_intWbtProjectID" value="DE09C64E047D471C960F1C1A450251CF" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="4" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="13" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_xilxBitgCfg_GenOpt_DRC_virtex5" value="false" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Virtex6" type="design"/>
 <property name="PROP_DevDevice" value="xc6vlx240t" type="design"/>

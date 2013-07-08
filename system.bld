@@ -31,16 +31,16 @@ INFO:ConstraintSystem:178 - TNM 'clk_200', used in period specification
 
 WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
    "userRunClearTogUS" TO "userRunClearTogCS" 8000 ps DATAPATHONLY;>
-   [ML605.ucf(244)] is overridden by the constraint <TIMESPEC
+   [ML605.ucf(263)] is overridden by the constraint <TIMESPEC
    "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
-   DATAPATHONLY;> [ML605.ucf(247)]. The overriden constraint usually comes from
+   DATAPATHONLY;> [ML605.ucf(266)]. The overriden constraint usually comes from
    the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR
    to promote this message to an error.
 WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
    "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;>
-   [ML605.ucf(247)] is overridden by the constraint <TIMESPEC
+   [ML605.ucf(266)] is overridden by the constraint <TIMESPEC
    "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
-   DATAPATHONLY;> [ML605.ucf(251)]. The overriden constraint usually comes from
+   DATAPATHONLY;> [ML605.ucf(270)]. The overriden constraint usually comes from
    the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR
    to promote this message to an error.
 Done...
@@ -62,7 +62,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   4
 
-Total memory usage is 185264 kilobytes
+Total memory usage is 184944 kilobytes
 
 Writing NGD file "system.ngd" ...
 Total REAL time to NGDBUILD completion:  8 sec
