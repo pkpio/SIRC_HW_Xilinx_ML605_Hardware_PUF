@@ -25,7 +25,6 @@ Network configuration
 NOTE:
 
 1. A few steps above may not be required but with this settings its working for me.
-2. 
 2. Design Rule Check (DRC) has been disabled while generating a programmable file as it is causing errors.
 
 
