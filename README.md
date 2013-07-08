@@ -22,7 +22,11 @@ Network configuration
 7. Program the board via Jtag before attempting to send software commmands on the FPGA reboot (U always missed this !)
 
 
-NOTE	:	A few steps above may not be required but with this settings its working for me.
+NOTE:
+1. A few steps above may not be required but with this settings its working for me.
+2. Design Rule Check (DRC) has been disabled while generating a programmable file as it is causing errors.
+
+
 
 We may enable the other network once we do a software connection.
 It doesn't effect until the next board or network reboot or connections change.
