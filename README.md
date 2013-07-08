@@ -1,7 +1,7 @@
 SIRC_HW_Xilinx_ML605_Hardware_PUF
 =================================
 
-Implementation of SIRC, hardware end code for a Xilinx virtex 6 ML605 device. This project is made to work with a actual hardware PUF. PUF - Physically Unclonable Function.
+Implementation of SIRC, hardware end code for a Xilinx virtex 6 ML605 device. This project is made to work with an actual hardware PUF. PUF - Physically Unclonable Function.
 
 Network configuration
 
